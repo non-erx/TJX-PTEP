@@ -19,6 +19,14 @@ And they all retain the size of the original barcode (14 numbers).
 ## Purpose
 This project is designed to illustrate potential solutions for a critical yet under-recognized issue in the retail industry. It aims to provide a foundation for companies like TJX to stay ahead of potential risks related to pricing discrepancies and fraud.
 
+## Implementation
+
+To further integrate security measures into the retail workflow, I propose two key implementation points:
+
+1.  **Mobile Terminal Integration:** During the process of entering product information into the mobile terminal, the script can be executed to encrypt the barcode before generating the price ticket. This ensures that only authorized personnel can create tickets with encrypted barcodes, preventing counterfeit tickets from being issued at the point of sale.
+    
+2.  **Point of Sale (PoS) Scanning:** When a barcode is scanned at the PoS, the system can use the decryption script to verify the integrity of the price ticket. By decrypting the barcode and cross-referencing the data, the system can confirm that the price matches the intended sale price, further safeguarding against fraudulent activities.
+
 ## Legal and Ethical Usage
 **IMPORTANT:** This project is intended for educational and illustrative purposes only. Unauthorized use of these scripts for fraudulent activities, including the creation of counterfeit price tickets, is illegal and unethical. Users are encouraged to apply the knowledge gained from this project responsibly and to seek permission before implementing similar solutions in any commercial environment.
 
@@ -50,14 +58,6 @@ In the final step, I implemented a script featuring three encryption methods to 
 
 ![Encrypted Ticket](https://github.com/user-attachments/assets/b8de8c45-6cf6-4f5d-9c74-b297f802664f)
 
-## Implementation
-
-To further integrate security measures into the retail workflow, I propose two key implementation points:
-
-1.  **Mobile Terminal Integration:** During the process of entering product information into the mobile terminal, the script can be executed to encrypt the barcode before generating the price ticket. This ensures that only authorized personnel can create tickets with encrypted barcodes, preventing counterfeit tickets from being issued at the point of sale.
-    
-2.  **Point of Sale (PoS) Scanning:** When a barcode is scanned at the PoS, the system can use the decryption script to verify the integrity of the price ticket. By decrypting the barcode and cross-referencing the data, the system can confirm that the price matches the intended sale price, further safeguarding against fraudulent activities.
-  
 ## Acknowledgments
 
 I would like to express my heartfelt gratitude to TJX Companies and my coworkers for the opportunity to work here. This job has been instrumental in supporting my living expenses and helping me build a future in Canada. I truly appreciate being part of such a wonderful team during these challenging times, and I am eager to continue serving our customers and motivating those around me.
