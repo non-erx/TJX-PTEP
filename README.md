@@ -35,6 +35,23 @@ pricetag_generator_encrypted.py (to generate a picture (.png) of an encrypted pr
 pricetag_generator_unencrypted.py (to generate a picture (.png) of an unencrypted price ticket)
 ```
 
+## Example of Use and Explanation
+
+To create this project, I began by researching the structure of a typical price ticket. For reference, I used an image sourced from **[this Reddit thread](https://www.reddit.com/media?url=https://preview.redd.it/3fb7z5dg0la31.jpg?width=1080&crop=smart&auto=webp&s=4b2edc922c81150eececa1445b33c4ec472986c5)**:
+
+![Data](https://github.com/user-attachments/assets/33fd46f3-01b0-44fc-bd6d-f4d2d1aa04a0)
+
+Following this, I designed my own ticket template. To identify the fonts used in the original image, I utilized **[Font Squirrel's Matcherator](https://www.fontsquirrel.com/matcherator)**. Using this template, I developed a price ticket generator:
+
+![Unencrypted Ticket](https://github.com/user-attachments/assets/be6fa03d-a9d8-4b4d-8d96-09ace02065ac)
+
+
+In the final step, I implemented a script featuring three encryption methods to securely protect the information encoded in the barcode. Additionally, I created a decryption function to verify the integrity of the data. This led to the development of my own price ticket generator with an encrypted barcode:
+
+![Encrypted Ticket](https://github.com/user-attachments/assets/09151314-d8f5-4fed-a620-a88c79351118)
+
+---
+
 ## License
 This project is licensed under the MIT License.
 
