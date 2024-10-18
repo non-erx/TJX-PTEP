@@ -28,9 +28,9 @@ def multi_encrypt(number):
     return encrypted_number
 # Price Ticket Generation
 def generate_ticket(department, style, type_code, category, month=None, comparable=None, price=None):
-    department_str = f"{int(department):02}" 
+    department_str = f"{int(department):02}"
     style_str = f"{int(style):06}"
-    category_str = f"{int(category):04}" 
+    category_str = f"{int(category):04}"
     comparable_str = f"${float(comparable):.2f}" if comparable else None
     price_str = f"${float(price):.2f}" if price else None
     price_as_int = int(float(price) * 100) if price else 0
@@ -38,6 +38,13 @@ def generate_ticket(department, style, type_code, category, month=None, comparab
     encrypted_barcode_number = multi_encrypt(barcode_number)
     template = Image.open('pricetag.png')
     draw = ImageDraw.Draw(template)
+    # Debug output
+    print(f"department_str: {department_str}")
+    print(f"style_str: {style_str}")
+    print(f"category_str: {category_str}")
+    print(f"price_as_int: {price_as_int}")
+    barcode_number = f"{department_str}{style_str}{price_as_int:06}"
+    print(f"barcode_number: {barcode_number}") 
     # Fonts
     dept_font = ImageFont.truetype("fonts/garamond.ttf", 36)
     style_font = ImageFont.truetype("fonts/garamond.ttf", 36)
@@ -47,18 +54,21 @@ def generate_ticket(department, style, type_code, category, month=None, comparab
     price_font = ImageFont.truetype("fonts/pertibd.ttf", 48)
     price_value_font = ImageFont.truetype("fonts/avramsans.ttf", 58)
     # Place text
+    draw.text((106, 163), department_str, font=dept_font, fill=(0, 0, 0))
+    draw.text((262, 163), style_str, font=style_font, fill=(0, 0, 0))
+    draw.text((478, 163), str(type_code), font=type_font, fill=(0, 0, 0))
+    draw.text((84, 250), category_str, font=cat_font, fill=(0, 0, 0))
     if month:
         draw.text((431, 329), month, font=month_font, fill=(0, 0, 0))
     if comparable_str:
         draw.text((270, 520), comparable_str, font=price_font, fill=(0, 0, 0))
     if price_str:
         draw.text((213, 589), price_str, font=price_value_font, fill=(0, 0, 0))
-    barcode_image = generate_barcode(encrypted_barcode_number)
+    barcode_image = generate_barcode(barcode_number)
     barcode_position = (89, 680)
     template.paste(barcode_image, barcode_position)
     template.show()
-    template.save(f"price_ticket_{encrypted_barcode_number}.png")
-    print(f"Ticket generated: price_ticket_{encrypted_barcode_number}.png")
+    template.save(f"price_ticket_{barcode_number}.png")
 # Generate the barcode
 def generate_barcode(barcode_number):
     barcode_obj = barcode.get_barcode_class('code128')(barcode_number, writer=ImageWriter())
