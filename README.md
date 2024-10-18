@@ -50,7 +50,9 @@ In the final step, I implemented a script featuring three encryption methods to 
 
 ![Encrypted Ticket](https://github.com/user-attachments/assets/09151314-d8f5-4fed-a620-a88c79351118)
 
----
+## Acknowledgments
+
+I would like to express my heartfelt gratitude to TJX Companies and my coworkers for the opportunity to work here. This job has been instrumental in supporting my living expenses and helping me build a future in Canada. I truly appreciate being part of such a wonderful team during these challenging times, and I am eager to continue serving our customers and motivating those around me.
 
 ## License
 This project is licensed under the MIT License.
