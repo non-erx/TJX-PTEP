@@ -37,7 +37,7 @@ pricetag_generator_unencrypted.py (to generate a picture (.png) of an unencrypte
 
 ## Example of Use and Explanation
 
-To create this project, I began by researching the structure of a typical price ticket. For reference, I used an image sourced from **[this Reddit thread](https://www.reddit.com/media?url=https://preview.redd.it/3fb7z5dg0la31.jpg?width=1080&crop=smart&auto=webp&s=4b2edc922c81150eececa1445b33c4ec472986c5)**:
+To create this project, I began by researching the structure of a typical price ticket. For reference, I used an image sourced from **[this Reddit thread](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F3fb7z5dg0la31.jpg%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D4b2edc922c81150eececa1445b33c4ec472986c5)**:
 
 ![Data](https://github.com/user-attachments/assets/33fd46f3-01b0-44fc-bd6d-f4d2d1aa04a0)
 
