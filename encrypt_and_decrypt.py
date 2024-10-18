@@ -1,3 +1,4 @@
+#----------------------[ENCRYPTION&DECRYPTION START]--------------------------
 # Encryption keys for different methods
 SHIFT_KEY = 5  # Shift value for custom digit shift
 MOD_KEY = 7    # Modulus key for modular transformation
@@ -39,7 +40,6 @@ def scramble_decrypt(encrypted_number, order):
     decrypted_str = ''.join(decrypted)
     print(f"  {encrypted_number} -> {decrypted_str}")
     return decrypted_str
-
 # Encryption with different methods
 def multi_encrypt(number):
     print("\n--- Encrypting ---\n")
@@ -62,23 +62,19 @@ def multi_decrypt(encrypted_number):
     decrypted_number = custom_shift_decrypt(decrypted_number, SHIFT_KEY)
     print("\nFinal Decrypted Number:", decrypted_number)
     return decrypted_number
-# Function to handle encryption and decryption of the input number
+#----------------------[ENCRYPTION&DECRYPTION END]--------------------------
+
 def encrypt_and_decrypt(number):
     print(f"Original number: {number}\n")
-    # Encrypt using multiple different encryption methods
     encrypted_number = multi_encrypt(number)
-    # Decrypt using the reverse steps of encryption
     decrypted_number = multi_decrypt(encrypted_number)
-    # Display results
     print(f"\nOriginal Number: {number}")
     print(f"Encrypted Number: {encrypted_number}")
     print(f"Decrypted Number: {decrypted_number}")
-    # Check if the decrypted number matches the original
     if decrypted_number == number:
         print("\nDecryption successful! The decrypted number matches the original.")
     else:
         print("\nDecryption failed! The decrypted number does not match the original.")
-# Ask for the 14-digit input number from the user
 def get_user_input():
     while True:
         input_number = input("Please enter a 14-digit number: ")

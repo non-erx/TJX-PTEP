@@ -1,3 +1,4 @@
+#----------------------[DECRYPTION START]--------------------------
 # Decryption keys for different methods
 SHIFT_KEY = 5  # Shift value for custom digit shift
 MOD_KEY = 7    # Modulus key for modular transformation
@@ -26,6 +27,8 @@ def multi_decrypt(encrypted_number):
     # Reverse Custom Shift
     decrypted_number = custom_shift_decrypt(decrypted_number, SHIFT_KEY)
     return decrypted_number
+#----------------------[DECRYPTION END]--------------------------
+
 def decrypt_number(encrypted_number):
     print(f"Encrypted number: {encrypted_number}\n")
     decrypted_number = multi_decrypt(encrypted_number)

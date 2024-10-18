@@ -3,7 +3,6 @@ import barcode
 from barcode.writer import ImageWriter
 import random
 
-# Price Ticket Generation
 def generate_ticket(department, style, type_code, category, month=None, comparable=None, price=None):
     department_str = f"{int(department):02}"
     style_str = f"{int(style):06}"
@@ -43,7 +42,6 @@ def generate_ticket(department, style, type_code, category, month=None, comparab
     template.show()
     template.save(f"price_ticket_{barcode_number}.png")
     print(f"Ticket generated: price_ticket_{barcode_number}.png")
-# Generate the barcode
 def generate_barcode(barcode_number):
     barcode_obj = barcode.get_barcode_class('code128')(barcode_number, writer=ImageWriter())
     barcode_image = barcode_obj.render(writer_options={'write_text': False})
@@ -54,7 +52,6 @@ def generate_barcode(barcode_number):
     new_height = int(bw_barcode.height / 2)
     resized_barcode = bw_barcode.resize((new_width, new_height), Image.NEAREST)
     return resized_barcode
-# Generate random input
 def generate_random_input():
     department = random.randint(2, 99)
     style = random.randint(100000, 999999)
@@ -64,7 +61,6 @@ def generate_random_input():
     comparable = round(random.uniform(10.00, 100.00), 2)
     price = round(random.uniform(10.00, 100.00), 2)
     return department, style, type_code, category, month, comparable, price
-# Manually input all fields
 def get_manual_input():
     department = input("Enter department (02-99): ")
     style = input("Enter style (6 digits): ")
