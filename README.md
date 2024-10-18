@@ -48,7 +48,7 @@ Following this, I designed my own ticket template. To identify the fonts used in
 
 In the final step, I implemented a script featuring three encryption methods to securely protect the information encoded in the barcode. Additionally, I created a decryption function to verify the integrity of the data. This led to the development of my own price ticket generator with an encrypted barcode:
 
-![Encrypted Ticket](https://github.com/user-attachments/assets/09151314-d8f5-4fed-a620-a88c79351118)
+![Encrypted Ticket](https://github.com/user-attachments/assets/b8de8c45-6cf6-4f5d-9c74-b297f802664f)
 
 ## Acknowledgments
 
