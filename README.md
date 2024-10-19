@@ -46,18 +46,17 @@ pricetag_generator_unencrypted.py (to generate a picture (.png) of an unencrypte
 
 ## Example of Use and Explanation
 
-To create this project, I began by researching the structure of a typical price ticket. For reference, I used an image sourced from **[this Reddit thread](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F3fb7z5dg0la31.jpg%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D4b2edc922c81150eececa1445b33c4ec472986c5)**:
+To create this project, I began by researching the structure of a typical price ticket. For reference, I used an image sourced from my own purchase:
 
-![Data](https://github.com/user-attachments/assets/33fd46f3-01b0-44fc-bd6d-f4d2d1aa04a0)
+![Data](https://github.com/user-attachments/assets/eae708bc-ff94-4e4e-87c6-9a5e5fda6361)
 
 Following this, I designed my own ticket template. To identify the fonts used in the original image, I utilized **[Font Squirrel's Matcherator](https://www.fontsquirrel.com/matcherator)**. Using this template, I developed a price ticket generator:
 
-![Unencrypted Ticket](https://github.com/user-attachments/assets/be6fa03d-a9d8-4b4d-8d96-09ace02065ac)
-
+![Unencrypted Ticket](https://github.com/user-attachments/assets/2886aa39-efbe-4759-a25f-771e2dc6af98)
 
 In the final step, I implemented a script featuring three encryption methods to securely protect the information encoded in the barcode. Additionally, I created a decryption function to verify the integrity of the data. This led to the development of my own price ticket generator with an encrypted barcode:
 
-![Encrypted Ticket](https://github.com/user-attachments/assets/b8de8c45-6cf6-4f5d-9c74-b297f802664f)
+![Encrypted Ticket](https://github.com/user-attachments/assets/9c90ca00-7e93-4cf2-8e96-dbfa4377ccbd)
 
 ## Acknowledgments
 
